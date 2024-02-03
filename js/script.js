@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fetch data from the REST countries API
 
 
-    let QuranApi = "https://api.alquran.cloud/v1/quran/en.asad";
+    let QuranApi = "https://api.alquran.cloud/v1/quran/ar.asad";
     let fetchcall = fetch(QuranApi)
         .then((res) => res.json())
         .then((alldata) => {
