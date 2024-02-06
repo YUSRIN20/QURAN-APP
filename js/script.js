@@ -1,15 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Fetch data from the REST countries API
+    const pageLoadingSpinner = document.getElementById("page-loading-spinner");
+    pageLoadingSpinner.style.display = "block";
 
-
-    let QuranApi = "https://api.alquran.cloud/v1/quran/ar.asad";
+    let QuranApi = "https://api.alquran.cloud/v1/quran/en.asad";
     let fetchcall = fetch(QuranApi)
         .then((res) => res.json())
         .then((alldata) => {
+            
+          // Hide the loading spinner after fetching data
+          pageLoadingSpinner.style.display = "none";
+
             const containerdiv =  document.createElement("div")
             document.body.appendChild(containerdiv)
             containerdiv.className = "container text-center"
 
+  
             const heading  = containerdiv.appendChild(document.createElement("h1"))
             heading.textContent = "Al-Quran"
 
@@ -115,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         
                     })
               
-                });
+                }) 
                 // getsurahbutton.addEventListener("click", async () => {
                 //     try {
                 //         const Ayahresponse = await getsurah(alldata.data.surahs[i]);
@@ -126,7 +132,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 // });
             };
         });
-});
+        
+        
+})
 
 // async function getsurah(ayah) {
 //     let ayahObJ = await fetch(`https://api.alquran.cloud/v1/quran/en.asad/surah/${ayah}`);
