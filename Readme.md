@@ -1,4 +1,4 @@
-# QURAN API### Al-Quran Ayah Details Web Application
+# Al-Quran Ayah Details Web Application
 
 This is a web application built to display details of Quranic verses (Ayahs) using data fetched from the REST Countries API. The application dynamically creates DOM elements using HTML, CSS, and JavaScript, incorporating Bootstrap for styling and responsive design. It also includes error handling mechanisms.
 
