@@ -2,8 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fetch data from the REST countries API
     const pageLoadingSpinner = document.getElementById("page-loading-spinner");
     pageLoadingSpinner.style.display = "block";
-
-    let QuranApi = "https://api.alquran.cloud/v1/quran/en.asad";
+    
+    let QuranApi = "https://api.alquran.cloud/v1/quran/ar.asad";
+    const dropdownbtn = document.getElementById("dropdown-btn")
+    const arabicbtn = document.getElementById("Arabic-selection")
+    const englishbtn = document.getElementById("English-selection")
+    
+    // arabicbtn.addEventListener("click",()=>{
+    //     console.log("clicked")
+    //     QuranApi ="https://api.alquran.cloud/v1/quran/ar.asad"
+    // })
+  
     let fetchcall = fetch(QuranApi)
         .then((res) => res.json())
         .then((alldata) => {
