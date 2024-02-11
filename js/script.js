@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Fetch data from the REST countries API
+    // Fetch data from the QURAN API
     const pageLoadingSpinner = document.getElementById("page-loading-spinner");
     pageLoadingSpinner.style.display = "block";
     
